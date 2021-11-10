@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Clone Marquee</title>
+</head>
+<body>
+    <!-- ---------Essaie de marquee---------- -->
+    <!-- <marquee behavior="" direction="">Lorem ipsum dolor sit amet consectetur adipisicing 
+        elit. Voluptate cum suscipit minima, molestias laboriosam dicta voluptatibus soluta
+        nam aliquam nihil sit sapiente nobis similique eos totam sunt consequuntur dolor?
+        Voluptas!
+    </marquee> -->
+    <!-- -----End essaie----- -->
+
+    <!-- ------Clone de marquee----- -->
+    <div style="margin-top: 100px;"></div>
+    <div class="container">
+        <div class="text_defilant">
+            Lorem ipsum dolor sit amet consectetur adipisicing 
+            elit. Voluptate cum suscipit minima, molestias laboriosam dicta voluptatibus soluta
+            nam aliquam nihil sit sapiente nobis similique eos totam sunt consequuntur dolor?
+            Voluptas!
+        </div>
+    </div>
+
+    <style>
+body {
+    background-color: pink;
+}
+
+        .container {
+            max-width: 100%;
+            overflow: hidden;
+            text-align: right;
+        }
+
+        .text_defilant {
+            font-weight: 900;
+            display: inline-block;
+            padding-left: 100%;
+            white-space: nowrap;
+            animation: defilement 53s infinite linear;
+        }
+        @keyframes defilement {
+          0% {
+            transform: translate3d(0,0,0);
+          }
+          100% {
+            transform: translate3d(-100%,0,0);
+          }
+        }
+    </style>
+    <!-- ------End clone----- -->
+</body>
+</html>
